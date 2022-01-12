@@ -25,6 +25,7 @@ class Pernyataan extends CI_Controller
     
     public function create() 
     {
+        $nama_foto = "ttd".time();
         $data = array(
             'button' => 'Create',
             'action' => site_url('pernyataan/create_action'),
@@ -36,7 +37,7 @@ class Pernyataan extends CI_Controller
             'nama_ortu' => set_value('nama_ortu'),
             'nik_ortu' => set_value('nik_ortu'),
             'pekerjaan' => set_value('pekerjaan'),
-            'images' => set_value('images'),
+            'images' => set_value($nama_foto),
         );
         $this->template->load('template','pernyataan/pernyataan_form', $data);
     }
@@ -45,6 +46,7 @@ class Pernyataan extends CI_Controller
     {
         $this->_rules();
         $foto = $this->upload_foto();
+        $nama_foto = "ttd".time();
         if ($this->form_validation->run() == FALSE) {
             $this->create();
         } else {

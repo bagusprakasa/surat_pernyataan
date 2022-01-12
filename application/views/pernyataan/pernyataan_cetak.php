@@ -156,7 +156,7 @@
   <span style="margin-left:170px"><?= date("d-m-Y",  time()) ?></span>
   <span style="margin-left:170px;"><img src="<?php echo base_url()."assets/ttd/".$ttd?>" alt="logo" width="70" /></span>
   <!-- <div style="margin-top:100px"></div> -->
-  <span style="margin-left:170px;">(<?= $nama_ortu ?>)</span>
+  <span style="margin-left:130px;">(<?= $nama_ortu ?>)</span>
 </div>
 </div>
   </section>
